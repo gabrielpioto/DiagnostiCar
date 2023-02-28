@@ -35,6 +35,10 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".status.StatusActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name=".trajeto.TrajetoHome"
             android:screenOrientation="portrait" >
         </activity>
@@ -53,6 +57,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".gerenciadorDeCarro.GerenciaCarrosActivity"></activity>
+        <activity android:name=".gerenciadorDeCarro.RegistraCarroActivity"></activity>
     </application>
 
 </manifest>

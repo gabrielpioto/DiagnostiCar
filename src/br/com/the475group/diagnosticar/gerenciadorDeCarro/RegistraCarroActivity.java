@@ -5,6 +5,7 @@ import java.util.List;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -20,15 +21,11 @@ import br.com.the475group.diagnosticar.modelo.Carro;
 
 public class RegistraCarroActivity extends RegistraActivity<Carro> implements OnItemSelectedListener{
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private EditText edtNome;
 	private Spinner spnrDispositivos;
 	private TextView txtAddress, txtDispositivo;
 	
-	private MySpinnerAdapter adapter;
+	private MyAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +40,24 @@ public class RegistraCarroActivity extends RegistraActivity<Carro> implements On
 //		ArrayAdapter<BluetoothDevice> adapter = new ArrayAdapter<BluetoothDevice>(
 //				this, android.R.layout.simple_spinner_item,
 //				Bluetooth.disponiveis);
-		 
-		adapter = new MySpinnerAdapter(this, Bluetooth.disponiveis);
-		spnrDispositivos.setAdapter(adapter);
-		setTitle(R.string.registra_carro_titulo);
-		spnrDispositivos.setOnItemSelectedListener(this);
-		if(isNovo){
+		//List<BluetoothDevice> lista = (List<BluetoothDevice>) getIntent().getSerializableExtra("lista"); 
+		adapter = new MyAdapter(this, Bluetooth.disponiveis);
+		this.spnrDispositivos.setAdapter(adapter);		
+		this.spnrDispositivos.setOnItemSelectedListener(this);
+		setTxtCabecText("Registra Carro"); // TODO: mudar isso depois
+			
+		if(objeto == null){
 			setBtnCabecImage(android.R.drawable.ic_menu_agenda);
+			Log.d("registra","atribuiu listener");
 			destravarCampos();
 			setBtnCabecClickListener(salvar);
 		} else {
 			setBtnCabecImage(android.R.drawable.ic_menu_edit);
 			setBtnCabecClickListener(destravar);
+			travarCampos();
 			preencherCampos(objeto);
-			travarCampos();			
-		}		
+		}
+		
 	}
 	
 	
@@ -71,8 +71,10 @@ public class RegistraCarroActivity extends RegistraActivity<Carro> implements On
 
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
-		//preencherCampos(objeto);
-	}	
+		// TODO Auto-generated method stub
+		
+	}
+	
 		
 	@Override
 	protected void travarCampos() {
@@ -102,8 +104,8 @@ public class RegistraCarroActivity extends RegistraActivity<Carro> implements On
 	@Override
 	protected void preencherCampos(Carro objeto) {
 		this.edtNome.setText(objeto.getNome());
-		BluetoothDevice item = Bluetooth.getDevice(objeto.getAddress()); 
-		this.spnrDispositivos.setSelection(adapter.getPosition(item));
+		this.txtAddress.setText(objeto.getAddress());
+		this.txtDispositivo.setText(objeto.getDispositivo());		
 	}
 
 	@Override
@@ -112,10 +114,10 @@ public class RegistraCarroActivity extends RegistraActivity<Carro> implements On
 				.toString(), txtDispositivo.getText().toString());
 	}
 	
-	private class MySpinnerAdapter extends ArrayAdapter<BluetoothDevice> {
+	private class MyAdapter extends ArrayAdapter<BluetoothDevice> {
 		List<BluetoothDevice> lista;
 
-		public MySpinnerAdapter(Context context, List<BluetoothDevice> lista) {
+		public MyAdapter(Context context, List<BluetoothDevice> lista) {
 			super(context, android.R.layout.simple_spinner_item, lista);
 			this.lista = lista;
 		}
@@ -148,4 +150,7 @@ public class RegistraCarroActivity extends RegistraActivity<Carro> implements On
 		}
 
 	}
+
+	
+	
 }

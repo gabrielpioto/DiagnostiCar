@@ -19,8 +19,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import br.com.the475group.diagnosticar.R;
 import br.com.the475group.diagnosticar.bluetooth.Bluetooth;
-import br.com.the475group.diagnosticar.daoBanco.CarroDAO;
-import br.com.the475group.diagnosticar.utilitarias.Carro;
+import br.com.the475group.diagnosticar.daoBanco.CarroDao;
+import br.com.the475group.diagnosticar.modelo.Carro;
 
 public class RegistraCarro extends Activity implements OnClickListener {
 
@@ -38,20 +38,20 @@ public class RegistraCarro extends Activity implements OnClickListener {
 	//Utilitárias
 	private Carro carro;
 	private ArrayList<BluetoothDevice> listaDispositivos;
-	private CarroDAO carDao;
+	private CarroDao carDao;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_registra_carro);
 
-		this.carDao = new CarroDAO(this);
+		this.carDao = new CarroDao(this);
 		this.carro = new Carro();
 		this.listaDispositivos = new ArrayList<BluetoothDevice>();
 		
-		this.btnSalvar = (Button) findViewById(R.id.registra_carro_btnSalvar);
+		//this.btnSalvar = (Button) findViewById(R.id.registra_carro_btnSalvar);
 		this.edtNome = (EditText) findViewById(R.id.registra_carro_edtNome);
-		this.txtAddress = (TextView) findViewById(R.id.registra_carro_txtAdress);
+		this.txtAddress = (TextView) findViewById(R.id.registra_carro_txtAddress);
 		this.txtDispositivo = (TextView) findViewById(R.id.registra_carro_txtDispositivo);
 		this.spnrDispositivos = (Spinner) findViewById(R.id.registra_carro_spnrDispositivos);
 		
@@ -135,9 +135,10 @@ public class RegistraCarro extends Activity implements OnClickListener {
 					R.string.activity_cadastro_carro_aviso_nome,
 					Toast.LENGTH_LONG).show();
 		} else {
-			if(this.carDao.update(this.carro, addressAntigo)){
-				finish();
-			}
+			//carDao.update(this.carro,addressAntigo);
+			//if(this.carDao.update(this.carro, addressAntigo)){
+			finish();
+			
 		}
 	}
 	
@@ -151,9 +152,8 @@ public class RegistraCarro extends Activity implements OnClickListener {
 					R.string.activity_cadastro_carro_aviso_nome,
 					Toast.LENGTH_LONG).show();
 		} else {
-			if(this.carDao.insert(this.carro)){
-				finish();
-			}
+			this.carDao.insert(this.carro);
+			finish();			
 		}
 	}
 	
@@ -191,13 +191,13 @@ public class RegistraCarro extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		switch(v.getId()){
-			case R.id.registra_carro_btnSalvar:
-				if(this.isAtualizar)
-					this.atualizar();
-				else
-					this.cadastrar();
-				break;
-		}
+//		switch(v.getId()){
+//			case R.id.registra_carro_btnSalvar:
+//				if(this.isAtualizar)
+//					this.atualizar();
+//				else
+//					this.cadastrar();
+//				break;
+//		}
 	}
 }

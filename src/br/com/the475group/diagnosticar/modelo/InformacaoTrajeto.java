@@ -1,8 +1,8 @@
-package br.com.the475group.diagnosticar.modelo;
+/*package br.com.the475group.diagnosticar.modelo;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Iterator;
-
 import br.com.the475group.simulador.Informacao;
 
 public class InformacaoTrajeto {
@@ -63,3 +63,4 @@ public class InformacaoTrajeto {
 	}
 	
 }
+*/

@@ -8,8 +8,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import br.com.the475group.diagnosticar.HomeActivity;
 import br.com.the475group.diagnosticar.R;
-import br.com.the475group.diagnosticar.daoBanco.CarroDAO;
-import br.com.the475group.diagnosticar.utilitarias.Carro;
+import br.com.the475group.diagnosticar.daoBanco.CarroDao;
+import br.com.the475group.diagnosticar.modelo.Carro;
 
 public class ConectaCarro extends AsyncTask<Void, Carro, Integer> {
 
@@ -17,14 +17,14 @@ public class ConectaCarro extends AsyncTask<Void, Carro, Integer> {
 	private Set<BluetoothDevice> listaDispositivos;
 	private ArrayList<Carro> listaConectaveis;
 	private Context context;
-	private CarroDAO daoCarro;
+	private CarroDao daoCarro;
 
 	public ConectaCarro(Set<BluetoothDevice> listaDispositivos, HomeActivity act) {
 		this.act = act;
 		this.listaConectaveis = new ArrayList<Carro>();
 		this.listaDispositivos = listaDispositivos;
 		this.context = act.getApplicationContext();
-		this.daoCarro = new CarroDAO(context);
+		this.daoCarro = new CarroDao(context);
 	}
 
 	@Override

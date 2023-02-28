@@ -10,7 +10,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import br.com.the475group.diagnosticar.utilitarias.Trajeto;
+import br.com.the475group.diagnosticar.modelo.Trajeto;
 
 /**
  * 

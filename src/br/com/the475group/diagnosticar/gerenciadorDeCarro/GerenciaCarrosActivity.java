@@ -1,63 +1,41 @@
 package br.com.the475group.diagnosticar.gerenciadorDeCarro;
 
-import java.util.List;
-
-import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-import android.widget.TwoLineListItem;
+import android.widget.AdapterView;
+import android.widget.SimpleCursorAdapter;
 import br.com.the475group.diagnosticar.GerenciaActivity;
-import br.com.the475group.diagnosticar.R;
+import br.com.the475group.diagnosticar.bluetooth.Bluetooth;
 import br.com.the475group.diagnosticar.daoBanco.CarroDao;
 import br.com.the475group.diagnosticar.modelo.Carro;
 
-public class GerenciaCarrosActivity extends GerenciaActivity<Carro, String> implements OnClickListener, OnItemClickListener{
+public class GerenciaCarrosActivity extends GerenciaActivity<Carro, String> {
 	
-	private static final long serialVersionUID = 1L;
-
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setDao(CarroDao.getInstance(this));
+		Log.d("testeGerenciaCarro", "criou activity");
+		dao = new CarroDao(this);
+		//dao.insert(new Carro("aaa","bbb","ccc"));
+		Bluetooth.prepararDisponiveis((CarroDao)dao);
+		Cursor c = dao.getCursorWithAll();
+	
+		registraActivityClass = RegistraCarroActivity.class;
+		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, 
+				c, new String[]{CarroDao.COL_NOME,CarroDao.COL_ID} , 
+				new int[]{android.R.id.text1,android.R.id.text2});
 		
-		setArrayAdapter(new MyArrayAdapter(this, getDao().getAll()));
-		
-		setRegistraActivityClass(RegistraCarroActivity.class);
-		
-		setTitle(R.string.gerencia_carros_titulo);
+		setCursorAdapter(adapter);
+		setTxtCabecText("Gerencia Carro"); //TODO: mudar isso depois
 	}
 	
-	private class MyArrayAdapter extends ArrayAdapter<Carro>{
-		private List<Carro> carros;
-		
-		public MyArrayAdapter(Context ctx, List<Carro> carros) {
-			super(ctx,android.R.layout.simple_list_item_2,carros);
-			this.carros = carros;
-		}
-		
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			 TwoLineListItem twoLineListItem;
-
-		        if (convertView == null) {
-		            twoLineListItem = (TwoLineListItem) getLayoutInflater().inflate(
-		                    android.R.layout.simple_list_item_2, null);
-		        } else {
-		            twoLineListItem = (TwoLineListItem) convertView;
-		        }
-
-		        TextView text1 = twoLineListItem.getText1();
-		        TextView text2 = twoLineListItem.getText2();
-
-		        text1.setText(carros.get(position).getNome());
-		        text2.setText(carros.get(position).getAddress());
-
-		        return twoLineListItem;
-		}
-	}	
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+		// TODO Auto-generated method stub
+		super.onItemClick(arg0, arg1, arg2, arg3);
+	}
+	
 }

@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import br.com.the475group.diagnosticar.R;
 import br.com.the475group.diagnosticar.daoBanco.TrajetoDAO;
-import br.com.the475group.diagnosticar.utilitarias.Trajeto;
+import br.com.the475group.diagnosticar.modelo.Trajeto;
 
 /**
  * @author Yves

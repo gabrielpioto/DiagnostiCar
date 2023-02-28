@@ -4,26 +4,20 @@ import java.io.Serializable;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 public abstract class RegistraActivity<T extends Serializable> extends BaseActivity {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	public static final String KEY_OBJETO = "objeto";
 	protected T objeto;
-	protected boolean isNovo;
 	
-	@SuppressWarnings("unchecked")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
 		objeto = (T) getIntent().getSerializableExtra(KEY_OBJETO);
-		isNovo = (objeto == null);
 	}
 	
 	protected abstract void travarCampos();
@@ -42,10 +36,13 @@ public abstract class RegistraActivity<T extends Serializable> extends BaseActiv
 		
 		@Override
 		public void onClick(View v) {
+			Log.d("registra","clicou");
 			if(validarCampos()){
+				Log.d("registra","validou");
 				Intent it = new Intent();
 				it.putExtra(KEY_OBJETO, obterObjeto());
 				setResult(RESULT_OK,it);
+				Log.d("registra","passou");
 				finish();
 			}			
 			

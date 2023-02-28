@@ -20,15 +20,15 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 import br.com.the475group.diagnosticar.R;
-import br.com.the475group.diagnosticar.daoBanco.CarroDAO;
-import br.com.the475group.diagnosticar.utilitarias.Carro;
+import br.com.the475group.diagnosticar.daoBanco.CarroDao;
+import br.com.the475group.diagnosticar.modelo.Carro;
 
 public class GerenciaCarros extends Activity {
 
 	private ListView lstCarros;
 	private ImageButton btnAdicionar;
 	private ArrayList<Carro> listaCarros;// Armazena os carros já cadastrados
-	private CarroDAO daoCarro;
+	private CarroDao daoCarro;
 
 	// constantes para o método putExtra que passa o adress e o nome do
 	// Dispositivo
@@ -46,8 +46,7 @@ public class GerenciaCarros extends Activity {
 		this.lstCarros = (ListView) findViewById(R.id.gerencia_lstCarros);
 		this.btnAdicionar = (ImageButton) findViewById(R.id.gerencia_imgBtnAdiciona);
 
-		this.daoCarro = new CarroDAO(this);
-		
+		this.daoCarro = new CarroDao(this);
 		this.lstCarros.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -78,9 +77,8 @@ public class GerenciaCarros extends Activity {
 									public void onClick(DialogInterface dialog,
 											int which) {
 										// TODO Auto-generated method stub
-										daoCarro.delete(listaCarros.get(arg2)
-												.getAddress());
-										listaCarros = daoCarro.selectAll();
+										daoCarro.delete(listaCarros.get(arg2));
+										listaCarros = (ArrayList<Carro>)daoCarro.selectAll();
 										insereListView();
 										Toast.makeText(
 												getApplicationContext(),
@@ -112,7 +110,7 @@ public class GerenciaCarros extends Activity {
 	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
-		this.listaCarros = daoCarro.selectAll();
+		this.listaCarros = (ArrayList<Carro>)daoCarro.selectAll();
 		this.insereListView();
 		super.onResume();
 	}

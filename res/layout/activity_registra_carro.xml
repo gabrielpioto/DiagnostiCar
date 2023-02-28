@@ -4,27 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:id="@+id/registra_carro_cabecalho"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/formato_layout_cabecalho"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/resgistra_txtCabecalho"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="10dp"
-            android:text="@string/activity_cadastro_carro_titulo"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/cinza_claro" />
-    </RelativeLayout>
-
     <LinearLayout
-        android:id="@+id/registra_carro_campos"
+        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/registra_carro_cabecalho"
@@ -33,7 +14,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/registra_carro_textView1"
+            
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/activity_cadastro_carro_nome"
@@ -54,7 +35,7 @@
             android:gravity="center_vertical" >
 
             <TextView
-                android:id="@+id/registra_carro_textView2"
+                
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/activity_cadastro_carro_dispositivo"
@@ -74,9 +55,9 @@
                     android:id="@+id/registra_carro_txtDispositivo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:text="@string/string_default"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_gravity="center_vertical" />
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
                 
             </FrameLayout>
 
@@ -88,27 +69,21 @@
             android:layout_marginTop="5dp" >
 
             <TextView
-                android:id="@+id/registra_carro_textView3"
+                
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/activity_cadastro_carro_address"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:id="@+id/registra_carro_txtAdress"
+                android:id="@+id/registra_carro_txtAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:text="@string/string_default"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-        </LinearLayout>
 
-        <Button
-            android:id="@+id/registra_carro_btnSalvar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@string/activity_cadastro_carro_salvar" />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

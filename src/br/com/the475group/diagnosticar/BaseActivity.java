@@ -27,13 +27,17 @@ public class BaseActivity extends Activity implements Serializable{
 		baseLayout = (LinearLayout) findViewById(R.id.base_layout);
 		txtCabecalho = (TextView) findViewById(R.id.txtCabecalho);
 		btnCabecalho = (ImageButton) findViewById(R.id.btnCabecalho);
-		Log.d("teste", "ainda ta valendo");
 		super.onCreate(savedInstanceState);
 	}
 	
 	@Override
 	public void setContentView(int layoutResID) {
 		View view = View.inflate(this,layoutResID,null);
+		baseLayout.addView(view,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+	}
+	
+	@Override
+	public void setContentView(View view) {
 		baseLayout.addView(view,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 	}
 	
@@ -65,7 +69,5 @@ public class BaseActivity extends Activity implements Serializable{
 	protected void setBtnCabecImage(int resId){
 		btnCabecalho.setImageResource(resId);
 	}
-	
-	
-	
+
 }
