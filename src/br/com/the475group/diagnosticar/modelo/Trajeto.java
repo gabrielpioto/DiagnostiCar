@@ -1,30 +1,51 @@
 package br.com.the475group.diagnosticar.modelo;
 
+import java.io.Serializable;
+
+import org.droidpersistence.annotation.Column;
+import org.droidpersistence.annotation.PrimaryKey;
+import org.droidpersistence.annotation.Table;
+
 /**
  *
  * @author Yves
  */
-public class Trajeto {
-    
-    private long id;
+@Table(name = "TRAJETO")
+public class Trajeto implements Serializable{
+	
+	@PrimaryKey(autoIncrement = true)
+	@Column(name = "_id")
+	private Integer id;
+	
+	@Column(name = "NOME")
     private String nome;
+	
+	@Column(name = "ORIGEM")
     private String origem;
+    
+	@Column(name = "DESTINO")
     private String destino;
     
     public Trajeto() {
+		id = null;
+		nome = "";
+		origem = "";
+		destino = "";
+	}	
+
+    public Trajeto(Integer id, String nome, String origem, String destino) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.origem = origem;
+		this.destino = destino;
 	}
-    
-    public Trajeto(String nome, String origem, String destino) {
-    	this.nome = nome;
-    	this.origem = origem;
-    	this.destino = destino;
+
+	public int getId() {
+    	return id;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -50,6 +71,13 @@ public class Trajeto {
 
     public void setDestino(String destino) {
         this.destino = destino;
+    }
+    
+    @Override
+    public String toString() {
+    	return "Nome: "+nome+"; "+
+    			"Origem: "+origem+"; "+
+    			"Destino: "+destino+"; ";
     }
     
 }

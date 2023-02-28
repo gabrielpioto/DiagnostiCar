@@ -10,13 +10,19 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import br.com.the475group.diagnosticar.bluetooth.Bluetooth;
 import br.com.the475group.diagnosticar.bluetooth.ConectaCarro;
-import br.com.the475group.diagnosticar.estatistica.Estatistica;
+import br.com.the475group.diagnosticar.estatistica.EstatisticaActivity;
 import br.com.the475group.diagnosticar.gerenciadorDeCarro.GerenciaCarrosActivity;
+import br.com.the475group.diagnosticar.modelo.Notificacao;
+import br.com.the475group.diagnosticar.sincronizacao.SincronizaActivity;
 import br.com.the475group.diagnosticar.status.StatusActivity;
-import br.com.the475group.diagnosticar.trajeto.TrajetoHome;
+import br.com.the475group.diagnosticar.trajeto.GerenciaTrajetoActivity;
 
 public class HomeActivity extends BaseActivity implements OnClickListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ImageButton btnTrajeto, btnEstatistica, btnStatus, btnWeb;
 	private ConectaCarro cntCarro;
 
@@ -26,6 +32,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 		setContentView(R.layout.activity_home);
 		// Instancia e associa os botões da Activity Home com os botões do XML
 		// Home
+		
 		this.btnTrajeto = (ImageButton) findViewById(R.id.home_imgBtnTrajetos);
 		this.btnEstatistica = (ImageButton) findViewById(R.id.home_imgBtnEstatistica);
 		this.btnStatus = (ImageButton) findViewById(R.id.home_imgBtnStatus);
@@ -47,8 +54,6 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 		}else{
 			Toast.makeText(getApplicationContext(), R.string.activity_home_toast_blueNaoSuportado, Toast.LENGTH_LONG).show();
 		}
-		
-		
 	}
 	
 	@Override
@@ -90,14 +95,19 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 		Intent it = null;
 		switch (v.getId()) {
 		case R.id.home_imgBtnEstatistica:
-			it = new Intent(HomeActivity.this, Estatistica.class);
+			it = new Intent(HomeActivity.this, EstatisticaActivity.class);
 			break;
 		case R.id.home_imgBtnTrajetos:
-			it = new Intent(HomeActivity.this, TrajetoHome.class);
+			it = new Intent(HomeActivity.this, GerenciaTrajetoActivity.class);
 			break;
 		case R.id.home_imgBtnStatus:
 			it = new Intent(HomeActivity.this, StatusActivity.class);
-		//TODO: continuar cases
+			Notificacao.geraNotificacao(getApplicationContext(), it, 
+					"DiagnostiCar", "Em execução", "Coleta de dados ativada");
+			break;
+		case R.id.home_imgBtnWEB:
+			it = new Intent(HomeActivity.this, SincronizaActivity.class);
+			break;
 		}
 		
 		if(it!=null){

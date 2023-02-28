@@ -9,56 +9,70 @@
         android:targetSdkVersion="15" />
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".testesuperior.ListagemCarros"
+            android:name="br.com.the475group.diagnosticar.trajeto.CadastroTrajeto"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".gerenciadorDeCarro.RegistraCarro"
+            android:name="br.com.the475group.diagnosticar.trajeto.ListagemTrajetos"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".gerenciadorDeCarro.GerenciaCarros"
+            android:name="br.com.the475group.diagnosticar.status.StatusActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".trajeto.CadastroTrajeto"
+            android:name="br.com.the475group.diagnosticar.trajeto.TrajetoHome"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".trajeto.ListagemTrajetos"
+            android:name="br.com.the475group.diagnosticar.estatistica.EstatisticaActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".status.StatusActivity"
+            android:name="br.com.the475group.diagnosticar.sincronizacao.SincronizaActivity"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name=".trajeto.TrajetoHome"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".estatistica.Estatistica"
-            android:screenOrientation="portrait" >
-        </activity>
-        
-        
         <activity
             android:name="br.com.the475group.diagnosticar.HomeActivity"
-            android:label="@string/app_name" >
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".gerenciadorDeCarro.GerenciaCarrosActivity"></activity>
-        <activity android:name=".gerenciadorDeCarro.RegistraCarroActivity"></activity>
+        <activity
+            android:name="br.com.the475group.diagnosticar.trajeto.RegistraTrajetoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.the475group.diagnosticar.trajeto.GerenciaTrajetoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.the475group.diagnosticar.gerenciadorDeCarro.GerenciaCarrosActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="br.com.the475group.diagnosticar.gerenciadorDeCarro.RegistraCarroActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="br.com.the475group.diagnosticar.estatistica.XYChartBuilder" >
+        </activity>
+        <activity
+            android:name="br.com.the475group.diagnosticar.sincronizacao.PreferenciasActivity"
+            android:label="@string/title_activity_preferencias" >
+        </activity>
     </application>
 
 </manifest>

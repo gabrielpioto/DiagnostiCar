@@ -4,6 +4,7 @@
     <!-- Activity Status -->
     
     <string name="activity_status_porcentagem_inicial">0 %</string>
+    <string name="activity_status_valor_inicial">0</string>
 
     <string name="activity_status_titulo">Status</string>
     <string name="activity_status_condicao">Condições:</string>

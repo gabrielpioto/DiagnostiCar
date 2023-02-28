@@ -7,8 +7,6 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-import br.com.the475group.diagnosticar.daoBanco.CarroDao;
-import br.com.the475group.diagnosticar.modelo.Carro;
 
 public class Bluetooth {
 
@@ -30,14 +28,5 @@ public class Bluetooth {
 			}
 		}
 		return null;
-	}
-	
-	public static void prepararDisponiveis(CarroDao dao){
-		for(BluetoothDevice dev : Bluetooth.dispPareados){
-			Carro carro = dao.selectById(dev.getAddress());
-			if (carro != null){
-				Bluetooth.disponiveis.remove(dev);
-			}
-		}
 	}
 }

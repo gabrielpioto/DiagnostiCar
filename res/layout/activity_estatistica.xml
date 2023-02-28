@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/axisX"
+            android:text="@string/estatistica_axisX"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/axisY"
+            android:text="@string/estatistica_axisY"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </LinearLayout>
@@ -65,6 +65,18 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/btnTesteGrafico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teste Grafico" />
+
     </LinearLayout>
 
 </LinearLayout>

@@ -2,22 +2,43 @@ package br.com.the475group.diagnosticar.modelo;
 
 import java.io.Serializable;
 
+import org.droidpersistence.annotation.Column;
+import org.droidpersistence.annotation.PrimaryKey;
+import org.droidpersistence.annotation.Table;
+
+@Table(name = "CARRO")
 public class Carro implements Serializable{
-	
+
+	@PrimaryKey
+	@Column(name = "_id")
 	private String address;
+	
+	@Column(name = "NOME")
 	private String nome;
+	
+	@Column(name = "DISPOSITIVO")
 	private String dispositivo;
 	
 	public Carro() {
-		this.address = "";
-		this.nome = "";
-		this.dispositivo = "";
-	}
+		nome = "";
+		address = "";
+		dispositivo = "";
+	}	
 
-	public Carro(String adress, String nome, String dispositivo) {
-		this.address = adress;
+	public Carro(String address, String nome, String dispositivo) {
+		super();
+		this.address = address;
 		this.nome = nome;
 		this.dispositivo = dispositivo;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getAddress() {
@@ -28,19 +49,12 @@ public class Carro implements Serializable{
 		this.address = address;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public String getDispositivo() {
 		return dispositivo;
 	}
 
 	public void setDispositivo(String dispositivo) {
 		this.dispositivo = dispositivo;
-	}
+	}	
+	
 }

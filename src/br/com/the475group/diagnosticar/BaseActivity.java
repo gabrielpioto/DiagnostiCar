@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -13,8 +12,9 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class BaseActivity extends Activity implements Serializable{
+public class BaseActivity extends Activity implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private LinearLayout baseLayout;
 	private TextView txtCabecalho;
 	private ImageButton btnCabecalho;
@@ -41,25 +41,26 @@ public class BaseActivity extends Activity implements Serializable{
 		baseLayout.addView(view,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 	}
 	
-	public void setTxtCabecText(final int textId){
+	@Override
+	public void setTitle(final int titleId) {
 		runOnUiThread(new Runnable() {
 			
 			@Override
 			public void run() {
-				txtCabecalho.setText(textId);
+				txtCabecalho.setText(titleId);
 			}
-		});	
-		
+		});
 	}
 	
-	public void setTxtCabecText(final String texto){
+	@Override
+	public void setTitle(final CharSequence title) {
 		runOnUiThread(new Runnable() {
 			
 			@Override
 			public void run() {
-				txtCabecalho.setText(texto);
+				txtCabecalho.setText(title);
 			}
-		});	
+		});
 	}
 	
 	protected void setBtnCabecClickListener(OnClickListener listener){

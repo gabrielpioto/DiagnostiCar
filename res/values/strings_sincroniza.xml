@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Activity Sincroniza -->
+    <string name="sincroniza_btn_sincroniza">Sincronizar dados</string>
+    <string name="sincroniza_btn_cancelar">Cancelar sincronização</string>
+    <string name="sincroniza_txt_informacao">É necessário ter cadastro em carcontrol.com</string>
+    
+    <string name="sincroniza_dialog_lista_titulo">Escolha uma conta:</string>
+    <string name="sincroniza_dialog_lista_ok">Ok</string>
+    <string name="sincroniza_dialog_lista_cancelar">Cancelar</string>
+    
+    <string name="sincroniza_dialog_conta_titulo">Você não possui conta!</string>
+    <string name="sincroniza_dialog_conta_msg">Sem ela, não é possível sincronizar. Crie uma agora.</string>
+    <string name="sincroniza_dialog_conta_criar">Criar</string>
+    <string name="sincroniza_dialog_conta_depois">Depois</string>
+    
+    <string name="sincroniza_dialog_desconectado_titulo">Você está desconectado!</string>
+    <string name="sincroniza_dialog_desconectado_msg">Sem internet, não é possível sincronizar. Conecte-se agora.</string>
+    <string name="sincroniza_dialog_desconectado_criar">Wi-Fi</string>
+    <string name="sincroniza_dialog_desconectado_depois">Depois</string>
+    
+    <string name="sincroniza_menu_preferencias">Preferências</string>
+    
+    <!-- Activity Preferencias  -->
+    <string name="preferencias_lista_titulo_sinc">Opções de sincronização</string>
+    <string name="preferencias_lista_item_automatica">Automático</string>
+    <string name="preferencias_lista_subitem_automatica">Sincroniza automaticamente</string>
+    <string name="preferencias_lista_item_wifi">Wi-Fi</string>
+    <string name="preferencias_lista_subitem_wifi">Somente sincroniza em Wi-Fi</string>
+    
+    <string name="preferencias_lista_titulo_contas">Opções de conta</string>
+    <string name="preferencias_lista_item_contas">CarControl</string>
+    <string name="preferencias_lista_subitem_contas">Visite a página</string>
+    
+    <string name="preferencias_lista_titulo_dados">Opções de dados</string>
+    <string name="preferencias_lista_item_dados">Manter informações</string>
+    <string name="preferencias_lista_subitem_dados">Mantém dados após sincronizar</string>
+    
+    <string name="preferencias_lista_dialogo_titulo">Apagar:</string>
+    <string-array name="preferencias_lista_dialogo_dados">
+        <item>Após sincronizar</item>
+        <item>Nunca</item>  
+    </string-array>
+    
+</resources>

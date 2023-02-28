@@ -1,8 +1,6 @@
-/*package br.com.the475group.diagnosticar.daoBanco;
+package br.com.the475group.diagnosticar.daoBanco;
 
-import java.sql.Date;
 import java.util.ArrayList;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -178,4 +176,4 @@ public class InformacaoDAO {
 		}
 		return infLista;
 	}
-}*/
+}

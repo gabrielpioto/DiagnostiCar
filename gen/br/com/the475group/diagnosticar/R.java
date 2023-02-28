@@ -9,47 +9,48 @@ package br.com.the475group.diagnosticar;
 
 public final class R {
     public static final class array {
-        public static final int axisX_elements=0x7f060000;
-        public static final int axisY_elements=0x7f060001;
+        public static final int estatistica_axisX_elements=0x7f070000;
+        public static final int estatistica_axisY_elements=0x7f070001;
+        public static final int preferencias_lista_dialogo_dados=0x7f070002;
     }
     public static final class attr {
     }
     public static final class color {
-        public static final int amarelo=0x7f040005;
-        public static final int azul=0x7f040009;
-        public static final int azul_acinzentado=0x7f04000a;
-        public static final int azul_acinzentado_claro=0x7f04000b;
-        public static final int azul_acinzentado_escuro=0x7f04000c;
-        public static final int azul_escuro=0x7f04000d;
-        public static final int background=0x7f040000;
-        public static final int branco=0x7f040004;
-        public static final int button_dark=0x7f040011;
+        public static final int amarelo=0x7f050005;
+        public static final int azul=0x7f050009;
+        public static final int azul_acinzentado=0x7f05000a;
+        public static final int azul_acinzentado_claro=0x7f05000b;
+        public static final int azul_acinzentado_escuro=0x7f05000c;
+        public static final int azul_escuro=0x7f05000d;
+        public static final int background=0x7f050000;
+        public static final int branco=0x7f050004;
+        public static final int button_dark=0x7f050011;
         /**     <color name="button_light">#F4B0C1</color>
     <color name="button_medium">#F592AB</color>
     <color name="button_dark">#FC537D</color> 
          */
-        public static final int button_light=0x7f04000f;
-        public static final int button_medium=0x7f040010;
-        public static final int button_titulo_dark=0x7f04001a;
-        public static final int button_titulo_light=0x7f040018;
-        public static final int button_titulo_medium=0x7f040019;
-        public static final int cinza=0x7f040006;
-        public static final int cinza_claro=0x7f040007;
-        public static final int cinza_escuro=0x7f040008;
-        public static final int clicked=0x7f04000e;
-        public static final int layout_dark=0x7f040014;
+        public static final int button_light=0x7f05000f;
+        public static final int button_medium=0x7f050010;
+        public static final int button_titulo_dark=0x7f05001a;
+        public static final int button_titulo_light=0x7f050018;
+        public static final int button_titulo_medium=0x7f050019;
+        public static final int cinza=0x7f050006;
+        public static final int cinza_claro=0x7f050007;
+        public static final int cinza_escuro=0x7f050008;
+        public static final int clicked=0x7f05000e;
+        public static final int layout_dark=0x7f050014;
         /** <color name="layout_light">#FCA5B6</color>
     <color name="layout_medium">#FE7490</color>
     <color name="layout_dark">#FB375E</color>  
          */
-        public static final int layout_light=0x7f040012;
-        public static final int layout_medium=0x7f040013;
-        public static final int preto=0x7f040002;
-        public static final int turquoise1=0x7f040015;
-        public static final int turquoise3=0x7f040016;
-        public static final int turquoise4=0x7f040017;
-        public static final int verde=0x7f040003;
-        public static final int vermelho=0x7f040001;
+        public static final int layout_light=0x7f050012;
+        public static final int layout_medium=0x7f050013;
+        public static final int preto=0x7f050002;
+        public static final int turquoise1=0x7f050015;
+        public static final int turquoise3=0x7f050016;
+        public static final int turquoise4=0x7f050017;
+        public static final int verde=0x7f050003;
+        public static final int vermelho=0x7f050001;
     }
     public static final class drawable {
         public static final int formato_botao=0x7f020000;
@@ -59,146 +60,169 @@ public final class R {
         public static final int ic_launcher=0x7f020004;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f09000a;
-        public static final int RelativeLayout1=0x7f090011;
-        public static final int base_layout=0x7f090000;
-        public static final int btnCabecalho=0x7f090002;
-        public static final int btnCadastrarTrajeto=0x7f090009;
-        public static final int btnNovo_Trajeto=0x7f09002e;
-        public static final int editar=0x7f090032;
-        public static final int gerencia_cabecalho=0x7f090012;
-        public static final int gerencia_imgBtnAdiciona=0x7f090014;
-        public static final int gerencia_listView=0x7f09002f;
-        public static final int gerencia_lstCarros=0x7f090015;
-        public static final int gerencia_txtCabecalho=0x7f090013;
-        public static final int gerenciadorDeCarro=0x7f090031;
-        public static final int home_imgBtnEstatistica=0x7f090017;
-        public static final int home_imgBtnStatus=0x7f090016;
-        public static final int home_imgBtnTrajetos=0x7f090018;
-        public static final int home_imgBtnWEB=0x7f090019;
-        public static final int lblCabecalho=0x7f09002d;
-        public static final int llayoutCabecalho=0x7f09002c;
-        public static final int lstView_listagem_trajetos=0x7f09002b;
-        public static final int menu_settings=0x7f090030;
-        public static final int registra_carro_cabecalho=0x7f09001a;
-        public static final int registra_carro_edtNome=0x7f09001b;
-        public static final int registra_carro_spnrDispositivos=0x7f09001c;
-        public static final int registra_carro_txtAddress=0x7f09001e;
-        public static final int registra_carro_txtDispositivo=0x7f09001d;
-        public static final int spnrEixoX=0x7f09000e;
-        public static final int spnrEixoY=0x7f090010;
-        public static final int status_pgbAgua=0x7f090028;
-        public static final int status_pgbCombustivel=0x7f090025;
-        public static final int status_txtCondicao=0x7f090020;
-        public static final int status_txtTemperatura=0x7f09002a;
-        public static final int status_txtVelocidade=0x7f090022;
-        public static final int textView1=0x7f09001f;
-        public static final int textView3=0x7f090021;
-        public static final int textView5=0x7f090023;
-        public static final int textView6=0x7f090024;
-        public static final int textView7=0x7f090026;
-        public static final int textView8=0x7f090027;
-        public static final int textView9=0x7f090029;
-        public static final int tvEixoX=0x7f09000b;
-        public static final int tvEixoY=0x7f09000d;
-        public static final int tvVersus=0x7f09000c;
-        public static final int tvVersus_1=0x7f09000f;
-        public static final int txtCabecalho=0x7f090001;
-        public static final int txtFieldDestino=0x7f090006;
-        public static final int txtFieldNome=0x7f090003;
-        public static final int txtFieldOrigem=0x7f090005;
-        public static final int txtViewDestino=0x7f090007;
-        public static final int txtViewNome=0x7f090004;
-        public static final int txtViewOrigem=0x7f090008;
+        public static final int LinearLayout1=0x7f0a0003;
+        public static final int RelativeLayout1=0x7f0a001b;
+        public static final int add=0x7f0a0028;
+        public static final int base_layout=0x7f0a0000;
+        public static final int btnCabecalho=0x7f0a0002;
+        public static final int btnTesteGrafico=0x7f0a000a;
+        public static final int chart=0x7f0a0029;
+        public static final int gerenciadorDeCarro=0x7f0a002c;
+        public static final int home_imgBtnEstatistica=0x7f0a000c;
+        public static final int home_imgBtnStatus=0x7f0a000b;
+        public static final int home_imgBtnTrajetos=0x7f0a000d;
+        public static final int home_imgBtnWEB=0x7f0a000e;
+        public static final int menu_settings=0x7f0a002b;
+        public static final int new_series=0x7f0a002a;
+        public static final int preferencias_lista=0x7f0a000f;
+        public static final int registra_carro_edtNome=0x7f0a0010;
+        public static final int registra_carro_spnrDispositivos=0x7f0a0011;
+        public static final int registra_carro_txtAddress=0x7f0a0013;
+        public static final int registra_carro_txtDispositivo=0x7f0a0012;
+        public static final int registra_trajeto_edtDestino=0x7f0a0019;
+        public static final int registra_trajeto_edtNome=0x7f0a0015;
+        public static final int registra_trajeto_edtOrigem=0x7f0a0017;
+        public static final int sincroniza_btnSincroniza=0x7f0a001a;
+        public static final int spnrEixoX=0x7f0a0007;
+        public static final int spnrEixoY=0x7f0a0009;
+        public static final int status_pgbAgua=0x7f0a0020;
+        public static final int status_pgbCombustivel=0x7f0a0023;
+        public static final int status_txtAgua=0x7f0a001f;
+        public static final int status_txtCombustivel=0x7f0a0022;
+        public static final int status_txtCondicao=0x7f0a001c;
+        public static final int status_txtTemperatura=0x7f0a0025;
+        public static final int status_txtVelocidade=0x7f0a001d;
+        public static final int textView1=0x7f0a0014;
+        public static final int textView2=0x7f0a0016;
+        public static final int textView3=0x7f0a0018;
+        public static final int textView5=0x7f0a001e;
+        public static final int textView7=0x7f0a0021;
+        public static final int textView9=0x7f0a0024;
+        public static final int tvEixoX=0x7f0a0004;
+        public static final int tvEixoY=0x7f0a0006;
+        public static final int tvVersus=0x7f0a0005;
+        public static final int tvVersus_1=0x7f0a0008;
+        public static final int txtCabecalho=0x7f0a0001;
+        public static final int xValue=0x7f0a0026;
+        public static final int yValue=0x7f0a0027;
     }
     public static final class layout {
         public static final int activity_base=0x7f030000;
-        public static final int activity_cadastro_trajeto=0x7f030001;
-        public static final int activity_estatistica=0x7f030002;
-        public static final int activity_gerencia_carros=0x7f030003;
-        public static final int activity_home=0x7f030004;
-        public static final int activity_registra_carro=0x7f030005;
-        public static final int activity_status=0x7f030006;
-        public static final int activity_trajeto_home=0x7f030007;
-        public static final int gerencia_activity=0x7f030008;
+        public static final int activity_estatistica=0x7f030001;
+        public static final int activity_home=0x7f030002;
+        public static final int activity_preferencias=0x7f030003;
+        public static final int activity_registra_carro=0x7f030004;
+        public static final int activity_registra_trajeto=0x7f030005;
+        public static final int activity_sincroniza=0x7f030006;
+        public static final int activity_status=0x7f030007;
+        public static final int xy_chart=0x7f030008;
     }
     public static final class menu {
-        public static final int activity_estatistica=0x7f080000;
-        public static final int activity_home=0x7f080001;
-        public static final int activity_visualiza_carro=0x7f080002;
+        public static final int activity_estatistica=0x7f090000;
+        public static final int activity_home=0x7f090001;
+        public static final int activity_preferencias=0x7f090002;
+        public static final int activity_sincroniza=0x7f090003;
     }
     public static final class string {
-        public static final int activity_cadastro_carro_address=0x7f05001e;
-        public static final int activity_cadastro_carro_aviso_nome=0x7f05001f;
-        public static final int activity_cadastro_carro_dispositivo=0x7f05001d;
-        public static final int activity_cadastro_carro_erro_adress=0x7f050020;
-        public static final int activity_cadastro_carro_nome=0x7f05001b;
-        public static final int activity_cadastro_carro_salvar=0x7f05001c;
-        /**  Activity Cadastro Carro 
-         */
-        public static final int activity_cadastro_carro_titulo=0x7f05001a;
-        public static final int activity_cadastro_trajeto_btncadastrar=0x7f05002d;
-        public static final int activity_cadastro_trajeto_lbldestino=0x7f05002c;
-        /**  Activity Cadastro Trajeto 
-         */
-        public static final int activity_cadastro_trajeto_lblnome=0x7f05002a;
-        public static final int activity_cadastro_trajeto_lblorigem=0x7f05002b;
-        public static final int activity_gerencia_carros_dialog_btnAdicionar=0x7f050013;
-        public static final int activity_gerencia_carros_dialog_btnCancelar=0x7f050014;
-        public static final int activity_gerencia_carros_dialog_btnNao=0x7f050016;
-        public static final int activity_gerencia_carros_dialog_btnSim=0x7f050015;
-        public static final int activity_gerencia_carros_dialog_msgVazio=0x7f050018;
-        public static final int activity_gerencia_carros_dialog_msg_deletar=0x7f050017;
-        public static final int activity_gerencia_carros_dialog_titulo1=0x7f050011;
-        public static final int activity_gerencia_carros_dialog_titulo2=0x7f050012;
-        /**  Activity Gerencia Carro 
-         */
-        public static final int activity_gerencia_carros_titulo=0x7f050010;
-        public static final int activity_gerencia_carros_toast_deletado=0x7f050019;
-        public static final int activity_home_estatisticas=0x7f050004;
-        public static final int activity_home_opcoes=0x7f050006;
-        public static final int activity_home_servidor_web=0x7f050005;
+        public static final int activity_home_estatisticas=0x7f060004;
+        public static final int activity_home_opcoes=0x7f060006;
+        public static final int activity_home_servidor_web=0x7f060005;
         /**  Activity Home 
          */
-        public static final int activity_home_status=0x7f050002;
-        public static final int activity_home_toast_blueAtivado=0x7f050007;
-        public static final int activity_home_toast_blueNaoAtivado=0x7f050008;
-        public static final int activity_home_toast_blueNaoSuportado=0x7f050009;
-        public static final int activity_home_trajetos=0x7f050003;
-        public static final int activity_status_condicao=0x7f050025;
-        public static final int activity_status_nivel_agua=0x7f050028;
-        public static final int activity_status_nivel_combustivel=0x7f050027;
+        public static final int activity_home_status=0x7f060002;
+        public static final int activity_home_toast_blueAtivado=0x7f060007;
+        public static final int activity_home_toast_blueNaoAtivado=0x7f060008;
+        public static final int activity_home_toast_blueNaoSuportado=0x7f060009;
+        public static final int activity_home_trajetos=0x7f060003;
+        public static final int activity_status_condicao=0x7f060044;
+        public static final int activity_status_nivel_agua=0x7f060047;
+        public static final int activity_status_nivel_combustivel=0x7f060046;
         /**  Activity Status 
          */
-        public static final int activity_status_porcentagem_inicial=0x7f050023;
-        public static final int activity_status_temperatura=0x7f050026;
-        public static final int activity_status_titulo=0x7f050024;
-        public static final int activity_status_velocidade=0x7f050029;
-        public static final int activity_trajeto_home_btnAdicionar_Trajeto=0x7f050031;
-        /**  Activity Trajeto Home 
-         */
-        public static final int activity_trajeto_home_lblCabecalho=0x7f05002e;
-        public static final int activity_trajeto_home_lbldestino=0x7f050030;
-        public static final int activity_trajeto_home_lblorigem=0x7f05002f;
-        /**  Activity Visualiza Carro 
-         */
-        public static final int activity_visualiza_carro_titulo=0x7f050021;
-        public static final int app_name=0x7f050000;
+        public static final int activity_status_porcentagem_inicial=0x7f060041;
+        public static final int activity_status_temperatura=0x7f060045;
+        public static final int activity_status_titulo=0x7f060043;
+        public static final int activity_status_valor_inicial=0x7f060042;
+        public static final int activity_status_velocidade=0x7f060048;
+        public static final int app_name=0x7f060000;
         /**  AssynTask ConectaCarro 
          */
-        public static final int assynTask_conectaCarro_conectando=0x7f05000b;
-        public static final int assynTask_conectaCarro_escolhaCarro=0x7f05000c;
-        public static final int assynTask_conectaCarro_nenhumEncontrado=0x7f05000d;
-        public static final int axisX=0x7f05000e;
-        public static final int axisY=0x7f05000f;
-        public static final int hello_world=0x7f050032;
-        public static final int menu_editar_carro=0x7f050022;
-        public static final int menu_gerencia_carro=0x7f05000a;
-        public static final int menu_settings=0x7f050033;
-        public static final int string_default=0x7f050001;
-        public static final int title_activity_estatistica=0x7f050034;
+        public static final int assynTask_conectaCarro_conectando=0x7f06000b;
+        public static final int assynTask_conectaCarro_escolhaCarro=0x7f06000c;
+        public static final int assynTask_conectaCarro_nenhumEncontrado=0x7f06000d;
+        public static final int estatistica_axisX=0x7f060022;
+        public static final int estatistica_axisY=0x7f060023;
+        public static final int estatistica_configuracoes=0x7f060025;
+        public static final int estatistica_titulo=0x7f060024;
+        /**  GerenciaCarro 
+         */
+        public static final int gerencia_base_confirmaExcluir=0x7f060010;
+        public static final int gerencia_carros_dialog_btnAdicionar=0x7f060018;
+        public static final int gerencia_carros_dialog_msgVazio=0x7f060019;
+        public static final int gerencia_carros_dialog_titulo1=0x7f060016;
+        public static final int gerencia_carros_dialog_titulo2=0x7f060017;
+        /**  Activity Gerencia Carro 
+         */
+        public static final int gerencia_carros_titulo=0x7f060015;
+        public static final int gerencia_carros_toast_deletado=0x7f06001a;
+        public static final int gerencia_trajeto_titulo=0x7f06004d;
+        public static final int hello_world=0x7f060011;
+        public static final int menu_gerencia_carro=0x7f06000a;
+        public static final int menu_settings=0x7f060012;
+        public static final int preferencias_lista_dialogo_titulo=0x7f060040;
+        public static final int preferencias_lista_item_automatica=0x7f060036;
+        public static final int preferencias_lista_item_contas=0x7f06003b;
+        public static final int preferencias_lista_item_dados=0x7f06003e;
+        public static final int preferencias_lista_item_wifi=0x7f060038;
+        public static final int preferencias_lista_subitem_automatica=0x7f060037;
+        public static final int preferencias_lista_subitem_contas=0x7f06003c;
+        public static final int preferencias_lista_subitem_dados=0x7f06003f;
+        public static final int preferencias_lista_subitem_wifi=0x7f060039;
+        public static final int preferencias_lista_titulo_contas=0x7f06003a;
+        public static final int preferencias_lista_titulo_dados=0x7f06003d;
+        /**  Activity Preferencias  
+         */
+        public static final int preferencias_lista_titulo_sinc=0x7f060035;
+        public static final int registra_carro_address=0x7f06001f;
+        public static final int registra_carro_aviso_nome=0x7f060020;
+        public static final int registra_carro_dispositivo=0x7f06001e;
+        public static final int registra_carro_erro_adress=0x7f060021;
+        public static final int registra_carro_nome=0x7f06001c;
+        public static final int registra_carro_salvar=0x7f06001d;
+        /**  Activity Cadastro Carro 
+         */
+        public static final int registra_carro_titulo=0x7f06001b;
+        public static final int registra_trajeto_titulo=0x7f06004c;
+        public static final int registra_trajeto_txtDestino=0x7f06004b;
+        public static final int registra_trajeto_txtNome=0x7f060049;
+        public static final int registra_trajeto_txtOrigem=0x7f06004a;
+        public static final int sincroniza_btn_cancelar=0x7f060027;
+        /**   Activity Sincroniza 
+         */
+        public static final int sincroniza_btn_sincroniza=0x7f060026;
+        public static final int sincroniza_dialog_conta_criar=0x7f06002e;
+        public static final int sincroniza_dialog_conta_depois=0x7f06002f;
+        public static final int sincroniza_dialog_conta_msg=0x7f06002d;
+        public static final int sincroniza_dialog_conta_titulo=0x7f06002c;
+        public static final int sincroniza_dialog_desconectado_criar=0x7f060032;
+        public static final int sincroniza_dialog_desconectado_depois=0x7f060033;
+        public static final int sincroniza_dialog_desconectado_msg=0x7f060031;
+        public static final int sincroniza_dialog_desconectado_titulo=0x7f060030;
+        public static final int sincroniza_dialog_lista_cancelar=0x7f06002b;
+        public static final int sincroniza_dialog_lista_ok=0x7f06002a;
+        public static final int sincroniza_dialog_lista_titulo=0x7f060029;
+        public static final int sincroniza_menu_preferencias=0x7f060034;
+        public static final int sincroniza_txt_informacao=0x7f060028;
+        public static final int string_default=0x7f060001;
+        public static final int title_activity_gerencia_trajeto=0x7f06000e;
+        public static final int title_activity_preferencias=0x7f060014;
+        public static final int title_activity_registra_trajeto=0x7f06000f;
+        public static final int title_activity_sincroniza=0x7f060013;
     }
     public static final class style {
-        public static final int AppTheme=0x7f070000;
+        public static final int AppTheme=0x7f080000;
+    }
+    public static final class xml {
+        public static final int preferences=0x7f040000;
     }
 }

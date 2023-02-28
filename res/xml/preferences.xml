@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/preferencias_lista_titulo_sinc" >
+        <CheckBoxPreference
+            android:key="parent_checkbox_sinc"
+            android:summary="@string/preferencias_lista_subitem_automatica"
+            android:title="@string/preferencias_lista_item_automatica" />
+        <CheckBoxPreference
+            android:dependency="parent_checkbox_sinc"
+            android:key="child_checkbox_wifi"
+            android:layout="?android:attr/preferenceLayoutChild"
+            android:summary="@string/preferencias_lista_subitem_wifi"
+            android:title="@string/preferencias_lista_item_wifi" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/preferencias_lista_titulo_dados" >
+        <ListPreference
+            android:dialogTitle="@string/preferencias_lista_dialogo_titulo"
+            android:entries="@array/preferencias_lista_dialogo_dados"
+            android:entryValues="@array/preferencias_lista_dialogo_dados"
+            android:key="list_preference"
+            android:summary="@string/preferencias_lista_subitem_dados"
+            android:title="@string/preferencias_lista_item_dados" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/preferencias_lista_titulo_contas" >
+        <PreferenceScreen
+            android:summary="@string/preferencias_lista_subitem_contas"
+            android:title="@string/preferencias_lista_item_contas" >
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://www.carcontrol.com" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+   
+</PreferenceScreen>

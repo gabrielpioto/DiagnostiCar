@@ -1,51 +1,46 @@
 package br.com.the475group.diagnosticar.daoBanco;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
-import br.com.the475group.diagnosticar.modelo.Carro;
+import org.droidpersistence.dao.DroidDao;
+import org.droidpersistence.dao.TableDefinition;
 
-public abstract class DAO<T, ID> extends SQLiteOpenHelper implements Serializable{
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+public abstract class DAO<T, ID extends Serializable> extends DroidDao<T,ID>{	
 	
-	private static final int DATABASE_VERSION = 1;
+	private static final String DATABASE_NAME = "DIAGNOSTICAR";
 	
-	private static final String DATABASE_NAME = "DiagnostiCar";
-	
-	public DAO(Context context) {
-		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+	protected DAO(Class<T> model, TableDefinition<T> tableDef, Context ctx){
+		super(model, tableDef, createDatabase(ctx));
 	}
 	
-	public abstract void insert(T dado);
-	
-	public abstract void delete(T dado);
-	
-	public abstract T selectById(ID id);
-	
-	public abstract Cursor getCursorWithAll();
-	
-	public abstract T getByCursor(Cursor c);
-	
-	public void update (T novo, T antigo){
-		delete(antigo);
-		insert(novo);
+	private static SQLiteDatabase createDatabase(Context ctx){
+		SQLiteDatabase db = ctx.openOrCreateDatabase(DATABASE_NAME, SQLiteDatabase.CREATE_IF_NECESSARY, null);
+		try {
+			TableDefinition.onCreate(db);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return db;
 	}
 	
-	public List<T> selectAll(){
-		List<T> lista = new ArrayList<T>(); 
-		Cursor cursor = getCursorWithAll();
-		if (cursor.moveToFirst()) {
-            do {               
-                lista.add(getByCursor(cursor));
-            } while (cursor.moveToNext());
-        }
-		cursor.close();
-		return lista;
+	public boolean insert(T dado){
+		try {
+			return (super.save(dado)!=-1);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
+	
+	public boolean update (T novo, T antigo){
+		return (delete(antigo) && insert(novo));
+	}
+	
+	public abstract boolean delete(T dado);
 	
 	public void insertAll(List<T> dados){
 		for(T dado : dados) insert(dado);
