@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="registra_trajeto_txtNome">Nome</string>
+    <string name="registra_trajeto_txtOrigem">Origem</string>
+    <string name="registra_trajeto_txtDestino">Destino</string>
+    <string name="registra_trajeto_titulo">Registra Trajeto</string>
+    
+    <string name="gerencia_trajeto_titulo">Gerencia Trajeto</string>
+</resources> 

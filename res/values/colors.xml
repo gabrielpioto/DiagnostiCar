@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#C0C0C0</color>
+    <color name="vermelho">#FF0000</color>
+    <color name="preto">#000000</color>
+    <color name="verde">#00FF00</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="amarelo">#EEDD82</color>
+    
+    <color name="cinza">#607B8B</color>
+    <color name="cinza_claro">#D3D3D3</color>
+    <color name="cinza_escuro">#2F4F4F</color>
+    
+    <color name="azul">#AFEEEE</color>
+    <color name="azul_acinzentado">#9FB6CD</color>
+    <color name="azul_acinzentado_claro">#C6E2FF</color>
+    <color name="azul_acinzentado_escuro">#4F94CD</color>
+    <color name="azul_escuro">#27408B</color>
+    
+    <color name="clicked">#9370DB</color>
+    
+  <!--    <color name="button_light">#F4B0C1</color>
+    <color name="button_medium">#F592AB</color>
+    <color name="button_dark">#FC537D</color> -->
+    
+    <color name="button_light">#F48989</color>
+    <color name="button_medium">#ED6262</color>
+    <color name="button_dark">#E53A3A</color>
+    
+    
+   <!--<color name="layout_light">#FCA5B6</color>
+    <color name="layout_medium">#FE7490</color>
+    <color name="layout_dark">#FB375E</color>  -->
+    
+    <color name="layout_light">#F48888</color>
+    <color name="layout_medium">#E94949</color>
+    <color name="layout_dark">#DB0A0A</color>
+    
+    <color name="turquoise1">#00F5FF</color>
+    <color name="turquoise3">#00C5CD</color>
+    <color name="turquoise4">#00868B</color>
+    
+     <color name="button_titulo_light">#E0FFFF</color>
+    <color name="button_titulo_medium">#B4CDCD</color>
+    <color name="button_titulo_dark">#A2B5CD</color> 
+    
+    
+
+</resources>
