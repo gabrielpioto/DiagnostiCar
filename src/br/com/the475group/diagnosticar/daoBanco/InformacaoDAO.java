@@ -1,11 +1,13 @@
 package br.com.the475group.diagnosticar.daoBanco;
 
+import java.sql.Date;
 import java.util.ArrayList;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import br.com.the475group.simulador.Informacao;
+import br.com.the475group.diagnosticar.utilitarias.Informacao;
 
 public class InformacaoDAO {
 	private SQLiteDatabase db;
@@ -126,14 +128,14 @@ public class InformacaoDAO {
 			if (this.cursor.getCount() != 0) {
 				this.cursor.moveToFirst();
 
-				inf.setCodigo(this.cursor.getInt(this.cursor
+				inf.setId(this.cursor.getLong(this.cursor
 						.getColumnIndex("inf_id")));
 				inf.setValor(this.cursor.getDouble(this.cursor
 						.getColumnIndex("inf_valor")));
 				inf.setUnidade(this.cursor.getString(this.cursor
 						.getColumnIndex("inf_unidade")));
-				inf.setData(this.cursor.getLong(this.cursor
-						.getColumnIndex("inf_data")));
+				inf.setData(Date.valueOf(this.cursor.getString(this.cursor
+						.getColumnIndex("inf_data"))));
 			} else {
 				inf = null;
 			}
@@ -156,14 +158,15 @@ public class InformacaoDAO {
 				for (int i = 1; i <= this.cursor.getCount(); i++) {
 					Informacao inf = new Informacao();
 
-					inf.setCodigo(this.cursor.getInt(this.cursor
+					inf.setId(this.cursor.getLong(this.cursor
 							.getColumnIndex("inf_id")));
 					inf.setValor(this.cursor.getDouble(this.cursor
 							.getColumnIndex("inf_valor")));
 					inf.setUnidade(this.cursor.getString(this.cursor
 							.getColumnIndex("inf_unidade")));
-					inf.setData(this.cursor.getLong(this.cursor
-							.getColumnIndex("inf_data")));
+
+					inf.setData(Date.valueOf(this.cursor.getString(this.cursor
+							.getColumnIndex("inf_data"))));
 
 					infLista.add(inf);
 					this.cursor.moveToNext();

@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -14,10 +15,6 @@ import android.widget.TextView;
 
 public class BaseActivity extends Activity implements Serializable{
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private LinearLayout baseLayout;
 	private TextView txtCabecalho;
 	private ImageButton btnCabecalho;
@@ -30,6 +27,7 @@ public class BaseActivity extends Activity implements Serializable{
 		baseLayout = (LinearLayout) findViewById(R.id.base_layout);
 		txtCabecalho = (TextView) findViewById(R.id.txtCabecalho);
 		btnCabecalho = (ImageButton) findViewById(R.id.btnCabecalho);
+		Log.d("teste", "ainda ta valendo");
 		super.onCreate(savedInstanceState);
 	}
 	
@@ -39,31 +37,25 @@ public class BaseActivity extends Activity implements Serializable{
 		baseLayout.addView(view,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 	}
 	
-	@Override
-	public void setContentView(View view) {
-		baseLayout.addView(view,LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-	}
-	
-	@Override
-	public void setTitle(final int titleId) {
+	public void setTxtCabecText(final int textId){
 		runOnUiThread(new Runnable() {
 			
 			@Override
 			public void run() {
-				txtCabecalho.setText(titleId);
+				txtCabecalho.setText(textId);
 			}
-		});
+		});	
+		
 	}
 	
-	@Override
-	public void setTitle(final CharSequence title) {
+	public void setTxtCabecText(final String texto){
 		runOnUiThread(new Runnable() {
 			
 			@Override
 			public void run() {
-				txtCabecalho.setText(title);
+				txtCabecalho.setText(texto);
 			}
-		});
+		});	
 	}
 	
 	protected void setBtnCabecClickListener(OnClickListener listener){
@@ -73,5 +65,7 @@ public class BaseActivity extends Activity implements Serializable{
 	protected void setBtnCabecImage(int resId){
 		btnCabecalho.setImageResource(resId);
 	}
-
+	
+	
+	
 }

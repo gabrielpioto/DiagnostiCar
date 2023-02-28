@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="estatistica_axisX">Eixo X</string>
-    <string name="estatistica_axisY">Eixo Y</string>
-    <string-array name="estatistica_axisX_elements">
+    <string name="axisX">Eixo X</string>
+    <string name="axisY">Eixo Y</string>
+    <string-array name="axisX_elements">
         <item >Data</item>
         <item >Trajeto</item>
         <item >Data e Trajeto</item>
     </string-array>
-    <string-array name="estatistica_axisY_elements">
+    <string-array name="axisY_elements">
         <item >Kilometragem</item>
         <item >Velocidade Média</item>
         <item >Combustível</item>
         <item >Tempo</item>
     </string-array>
-    <string name="estatistica_titulo">Estatistica</string>
-    <string name="estatistica_configuracoes">Configuracoes</string>
 </resources> 

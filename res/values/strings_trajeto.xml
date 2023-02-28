@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="registra_trajeto_txtNome">Nome</string>
-    <string name="registra_trajeto_txtOrigem">Origem</string>
-    <string name="registra_trajeto_txtDestino">Destino</string>
-    <string name="registra_trajeto_titulo">Registra Trajeto</string>
+    <!-- Activity Cadastro Trajeto -->
+
+    <string name="activity_cadastro_trajeto_lblnome">Nome</string>
+    <string name="activity_cadastro_trajeto_lblorigem">Origem</string>
+    <string name="activity_cadastro_trajeto_lbldestino">Destino</string>
+    <string name="activity_cadastro_trajeto_btncadastrar">Cadastrar</string>
+
+    <!-- Activity Trajeto Home -->
+
+    <string name="activity_trajeto_home_lblCabecalho">Trajetos</string>
+    <string name="activity_trajeto_home_lblorigem">Origem</string>
+    <string name="activity_trajeto_home_lbldestino">Destino</string>
+    <string name="activity_trajeto_home_btnAdicionar_Trajeto">+</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_estatistica">EstatisticaActivity</string>
     
-    <string name="gerencia_trajeto_titulo">Gerencia Trajeto</string>
 </resources> 

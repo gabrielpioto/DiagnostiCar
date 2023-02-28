@@ -14,18 +14,13 @@
     <string name="activity_home_toast_blueAtivado">Bluetooth ativado com sucesso</string>
     <string name="activity_home_toast_blueNaoAtivado">Bluetooth não foi ativado</string>
     <string name="activity_home_toast_blueNaoSuportado">Este dispositivo não suporta o bluetooth</string>
+    
     <string name="menu_gerencia_carro">Gerenciador de carros</string>
-
+    
     <!-- AssynTask ConectaCarro -->
 
-    <string name="assynTask_conectaCarro_conectando">Conectando...</string>
-    <string name="assynTask_conectaCarro_escolhaCarro">Escolha um carro</string>
-    <string name="assynTask_conectaCarro_nenhumEncontrado">Nenhum carro encontrado</string>
-    <string name="title_activity_gerencia_trajeto">GerenciaTrajetoActivity</string>
-    <string name="title_activity_registra_trajeto">RegistraTrajetoActivity</string>
-    
-    <!-- GerenciaCarro -->
-    
-    <string name="gerencia_base_confirmaExcluir">Deseja realmente excluir este item?</string>
+	<string name="assynTask_conectaCarro_conectando">Conectando...</string>
+	<string name="assynTask_conectaCarro_escolhaCarro">Escolha um carro</string>
+	<string name="assynTask_conectaCarro_nenhumEncontrado">Nenhum carro encontrado</string>
 
 </resources>

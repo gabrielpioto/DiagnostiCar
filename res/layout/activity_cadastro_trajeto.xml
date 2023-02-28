@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/txtFieldNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/txtViewNome"
+        android:ems="10" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtFieldOrigem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtFieldNome"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/txtFieldDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtFieldOrigem"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/txtViewDestino"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/txtViewOrigem"
+        android:layout_alignTop="@+id/txtFieldDestino"
+        android:text="@string/activity_cadastro_trajeto_lbldestino"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtViewOrigem"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/txtViewNome"
+        android:layout_alignTop="@+id/txtFieldOrigem"
+        android:text="@string/activity_cadastro_trajeto_lblorigem"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtViewNome"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="37dp"
+        android:layout_toLeftOf="@+id/txtFieldNome"
+        android:text="@string/activity_cadastro_trajeto_lblnome"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCadastrarTrajeto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/activity_cadastro_trajeto_btncadastrar" />
+
+</RelativeLayout>

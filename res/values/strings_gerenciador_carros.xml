@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Activity Gerencia Carro -->
+    <string name="activity_gerencia_carros_titulo">Carros Cadastrados</string>
+    <string name="activity_gerencia_carros_dialog_titulo1">Selecione o dispositivo que deseja cadastrar</string>
+    <string name="activity_gerencia_carros_dialog_titulo2">Nenhum dispositivo para cadastro</string>
+    <string name="activity_gerencia_carros_dialog_btnAdicionar">Adicionar</string>
+    <string name="activity_gerencia_carros_dialog_btnCancelar">Cancelar</string>
+    <string name="activity_gerencia_carros_dialog_btnSim">Sim</string>
+    <string name="activity_gerencia_carros_dialog_btnNao">Não</string>
+    <string name="activity_gerencia_carros_dialog_msg_deletar">Deseja excluir este carro?</string>
+    <string name="activity_gerencia_carros_dialog_msgVazio">Para adicionar um novo carro é preciso que o dispositivo OBD já tenha sido emparelhado</string>
+    <string name="activity_gerencia_carros_toast_deletado">Excluido com sucesso</string>
+
+    <!-- Activity Cadastro Carro -->
+
+    <string name="activity_cadastro_carro_titulo">Cadastrar Carro</string>
+    <string name="activity_cadastro_carro_nome">Nome do Carro:</string>
+    <string name="activity_cadastro_carro_salvar">Salvar</string>
+    <string name="activity_cadastro_carro_dispositivo">Dispositivo:</string>
+    <string name="activity_cadastro_carro_address">Address:</string>
+    <string name="activity_cadastro_carro_aviso_nome">O campo nome está vazio</string>
+    <string name="activity_cadastro_carro_erro_adress">Erro com o adress, tente novamente</string>
+    
+    <!-- Activity Visualiza Carro -->
+    
+    <string name="activity_visualiza_carro_titulo">Visualização de Carro</string>
+    
+    <string name="menu_editar_carro">Editar</string>
+
+</resources>

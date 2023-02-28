@@ -26,8 +26,8 @@ public class Estatistica extends Activity implements OnItemSelectedListener{
 		setContentView(R.layout.activity_estatistica);
 		
 		Resources res = getResources();
-		elementosX = res.getStringArray(R.array.estatistica_axisX_elements);
-		elementosY = res.getStringArray(R.array.estatistica_axisY_elements);
+		elementosX = res.getStringArray(R.array.axisX_elements);
+		elementosY = res.getStringArray(R.array.axisY_elements);
 		
 		spnrEixoX = (Spinner) findViewById(R.id.spnrEixoX);
 		spnrEixoX.setOnItemSelectedListener(this);

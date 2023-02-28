@@ -11,49 +11,42 @@ import android.widget.Toast;
 import br.com.the475group.diagnosticar.bluetooth.Bluetooth;
 import br.com.the475group.diagnosticar.bluetooth.ConectaCarro;
 import br.com.the475group.diagnosticar.estatistica.Estatistica;
-import br.com.the475group.diagnosticar.gerenciadorDeCarro.GerenciaCarrosActivity;
-import br.com.the475group.diagnosticar.status.StatusActivity;
-import br.com.the475group.diagnosticar.trajeto.GerenciaTrajetoActivity;
+import br.com.the475group.diagnosticar.gerenciadorDeCarro.GerenciaCarros;
+import br.com.the475group.diagnosticar.trajeto.TrajetoHome;
 
 public class HomeActivity extends BaseActivity implements OnClickListener {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private ImageButton btnTrajeto, btnEstatistica, btnStatus, btnWeb;
 	private ConectaCarro cntCarro;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
+
 		// Instancia e associa os botões da Activity Home com os botões do XML
 		// Home
-		
 		this.btnTrajeto = (ImageButton) findViewById(R.id.home_imgBtnTrajetos);
 		this.btnEstatistica = (ImageButton) findViewById(R.id.home_imgBtnEstatistica);
 		this.btnStatus = (ImageButton) findViewById(R.id.home_imgBtnStatus);
 		this.btnWeb = (ImageButton) findViewById(R.id.home_imgBtnWEB);
-		
+
 		this.btnTrajeto.setOnClickListener(this);
 		this.btnStatus.setOnClickListener(this);
 		this.btnWeb.setOnClickListener(this);
 		this.btnEstatistica.setOnClickListener(this);
-		
 		
 		if(Bluetooth.temBluetooth){
 			this.cntCarro = new ConectaCarro(Bluetooth.dispPareados, this);
 			if(Bluetooth.estaLigado){
 				this.cntCarro.execute();
 			}else{
-				Bluetooth.ligarBluetooth(this);
+				Bluetooth.ligaBluetooth(this);
 			}
 		}else{
 			Toast.makeText(getApplicationContext(), R.string.activity_home_toast_blueNaoSuportado, Toast.LENGTH_LONG).show();
 		}
-		
-		
 	}
 	
 	@Override
@@ -68,7 +61,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 		// TODO Auto-generated method stub
 		switch (item.getItemId()) {
 		case R.id.gerenciadorDeCarro:
-			Intent it = new Intent(getApplicationContext(), GerenciaCarrosActivity.class);
+			Intent it = new Intent(getApplicationContext(), GerenciaCarros.class);
 			startActivity(it);
 			break;
 
@@ -98,10 +91,8 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 			it = new Intent(HomeActivity.this, Estatistica.class);
 			break;
 		case R.id.home_imgBtnTrajetos:
-			it = new Intent(HomeActivity.this, GerenciaTrajetoActivity.class);
+			it = new Intent(HomeActivity.this, TrajetoHome.class);
 			break;
-		case R.id.home_imgBtnStatus:
-			it = new Intent(HomeActivity.this, StatusActivity.class);
 		//TODO: continuar cases
 		}
 		
@@ -109,4 +100,7 @@ public class HomeActivity extends BaseActivity implements OnClickListener {
 			startActivity(it);
 		}
 	}
+
+	
+	
 }

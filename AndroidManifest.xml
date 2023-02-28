@@ -15,50 +15,43 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="br.com.the475group.diagnosticar.trajeto.CadastroTrajeto"
+            android:name=".testesuperior.ListagemCarros"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="br.com.the475group.diagnosticar.trajeto.ListagemTrajetos"
+            android:name=".gerenciadorDeCarro.RegistraCarro"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="br.com.the475group.diagnosticar.status.StatusActivity"
+            android:name=".gerenciadorDeCarro.GerenciaCarros"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="br.com.the475group.diagnosticar.trajeto.TrajetoHome"
+            android:name=".trajeto.CadastroTrajeto"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="br.com.the475group.diagnosticar.estatistica.Estatistica"
+            android:name=".trajeto.ListagemTrajetos"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".trajeto.TrajetoHome"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".estatistica.Estatistica"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
         <activity
             android:name="br.com.the475group.diagnosticar.HomeActivity"
-            android:screenOrientation="portrait" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity 
-            android:name=".trajeto.RegistraTrajetoActivity" 
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".trajeto.GerenciaTrajetoActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity 
-            android:name=".gerenciadorDeCarro.GerenciaCarrosActivity"
-            android:screenOrientation="portrait">
-            
-        </activity>
-        <activity 
-            android:name=".gerenciadorDeCarro.RegistraCarroActivity"
-            android:screenOrientation="portrait">
         </activity>
     </application>
 

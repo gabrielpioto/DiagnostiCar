@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/lstView_listagem_trajetos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/llayoutCabecalho"
+        android:layout_margin="10dp" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/llayoutCabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="19dp"
+        android:gravity="fill|right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lblCabecalho"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight="0.56"
+            android:text="@string/activity_trajeto_home_lblCabecalho"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnNovo_Trajeto"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="0.47"
+            android:textSize="20sp"
+            android:text="@string/activity_trajeto_home_btnAdicionar_Trajeto" />
+    </LinearLayout>
+
+</RelativeLayout>
